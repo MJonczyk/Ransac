@@ -16,11 +16,11 @@ def main():
     print("Key Points A - " + str(image_a.number_of_key_points))
     print("Key Points B - " + str(image_b.number_of_key_points))
 
-    pairs = ransac.pair_of_points(image_a, image_b)
-    with open('pairs.pickle', 'wb') as handle:
-        pickle.dump(pairs, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    # pairs = ransac.pair_of_points(image_a, image_b)
+    # with open(path + 'pairs.pickle', 'wb') as handle:
+    #     pickle.dump(pairs, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-    with open('pairs.pickle', 'rb') as handle:
+    with open(path + 'pairs.pickle', 'rb') as handle:
         pairs = pickle.load(handle)
 
     print("Pairs - " + str(len(pairs)))
